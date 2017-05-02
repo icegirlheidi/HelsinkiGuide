@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Helsinki Guide</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="see_fragment">SEE</string>
+    <string name="eat_fragment">EAT</string>
+    <string name="sleep_fragment">SLEEP</string>
+    <string name="play_fragment">PLAY</string>
+</resources>
