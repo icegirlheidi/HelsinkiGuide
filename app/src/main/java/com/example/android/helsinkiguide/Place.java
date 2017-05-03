@@ -18,6 +18,9 @@ public class Place {
     // image resource id of this place
     private int mImageResourceId;
 
+    // Set initially has no image
+    private static final int NO_IMAGE_PROVIDED = -1;
+
     // Construct Place class
     public Place(String placeName, String placeStyle, String placeDescription, int imageResourceId) {
         mPlaceName = placeName;
@@ -27,22 +30,27 @@ public class Place {
     }
 
     // Get the name of the place
-    public String getmPlaceName() {
+    public String getPlaceName() {
         return mPlaceName;
     }
 
     // Get the style of the place
-    public String getmPlaceStyle() {
+    public String getPlaceStyle() {
         return mPlaceStyle;
     }
 
     // Get a simple description about the place
-    public String getmPlaceDescription() {
+    public String getPlaceDescription() {
         return mPlaceDescription;
     }
 
     // Get the image resource Id of the place
     public int getImageResourceId() {
         return mImageResourceId;
+    }
+
+    // Check if there is image
+    public boolean hasImage() {
+        return mImageResourceId != NO_IMAGE_PROVIDED;
     }
 }
