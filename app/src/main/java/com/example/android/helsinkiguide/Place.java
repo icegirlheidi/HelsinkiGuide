@@ -29,6 +29,12 @@ public class Place {
         mImageResourceId = imageResourceId;
     }
 
+    // Construct Place class
+    public Place(String placeName, int imageResourceId) {
+        mPlaceName = placeName;
+        mImageResourceId = imageResourceId;
+    }
+
     // Get the name of the place
     public String getPlaceName() {
         return mPlaceName;

@@ -6,6 +6,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 
 /**
@@ -23,6 +26,21 @@ public class SeeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.place_list, container, false);
+
+        final ArrayList<Place> seePlaces = new ArrayList<>();
+        seePlaces.add(new Place("Tuomiokirkko", R.drawable.tuomiokirkko));
+        seePlaces.add(new Place("Temppeliaukio", R.drawable.tuomiokirkko));
+        seePlaces.add(new Place("Kamppi Chapel", R.drawable.tuomiokirkko));
+        seePlaces.add(new Place("Kiasma", R.drawable.tuomiokirkko));
+        seePlaces.add(new Place("Seurasaari", R.drawable.tuomiokirkko));
+        seePlaces.add(new Place("Sibelius Monument", R.drawable.tuomiokirkko));
+        seePlaces.add(new Place("Seurasaari", R.drawable.tuomiokirkko));
+        seePlaces.add(new Place("Suomenlinna", R.drawable.tuomiokirkko));
+
+        SeePlaceAdapter adapter = new SeePlaceAdapter(getContext(), seePlaces);
+
+        ListView listView = (ListView)rootView.findViewById(R.id.list);
+        listView.setAdapter(adapter);
 
         return rootView;
     }
