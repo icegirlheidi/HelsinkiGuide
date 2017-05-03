@@ -45,6 +45,7 @@ public class CategoryAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
+        // get the page title of each tab
         switch (position) {
             case 0:
                 return mContext.getString(R.string.see_fragment);
