@@ -62,7 +62,13 @@ public class EatFragment extends Fragment {
 
                 // Get the clicked list item at current position
                 Place eatPlace = eatPlaces.get(position);
+
+                // Turn to the page showing details of this place after certain item is clicked
                 Intent detailsIntent = new Intent(getActivity(), EatDetailsActivity.class);
+
+                // Put the position of the clicked item as extra information when turning to another activity.
+                detailsIntent.putExtra("position", position);
+
                 startActivity(detailsIntent);
             }
         });
