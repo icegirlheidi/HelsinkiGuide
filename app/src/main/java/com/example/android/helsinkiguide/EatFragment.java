@@ -1,11 +1,13 @@
 package com.example.android.helsinkiguide;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -53,6 +55,17 @@ public class EatFragment extends Fragment {
         PlaceAdapter placeAdapter = new PlaceAdapter(getActivity(), eatPlaces);
         ListView listView = (ListView)rootView.findViewById(R.id.list);
         listView.setAdapter(placeAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+                // Get the clicked list item at current position
+                Place eatPlace = eatPlaces.get(position);
+                Intent detailsIntent = new Intent(getActivity(), EatDetailsActivity.class);
+                startActivity(detailsIntent);
+            }
+        });
 
         return rootView;
     }

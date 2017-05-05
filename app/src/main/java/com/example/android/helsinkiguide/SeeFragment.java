@@ -6,7 +6,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -41,6 +43,16 @@ public class SeeFragment extends Fragment {
 
         ListView listView = (ListView)rootView.findViewById(R.id.list);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+                // Get the clicked list item at current position
+                Place seePlace = seePlaces.get(position);
+                Toast.makeText(getActivity(), "See item clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         return rootView;
     }

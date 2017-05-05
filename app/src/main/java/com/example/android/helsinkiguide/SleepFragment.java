@@ -6,7 +6,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -29,7 +31,7 @@ public class SleepFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.place_list, container, false);
 
         // Create and initialize array of places for sleeping
-        ArrayList<Place> sleepPlaces = new ArrayList<>();
+        final ArrayList<Place> sleepPlaces = new ArrayList<>();
         sleepPlaces.add(new Place("Hotel Haven", "TOP CHOICE",
                 "The closest hotel to the kauppatori is elegant, welcoming and scores high on all levels.",
                 R.drawable.place_pic));
@@ -71,6 +73,16 @@ public class SleepFragment extends Fragment {
         PlaceAdapter placeAdapter = new PlaceAdapter(getActivity(), sleepPlaces);
         ListView listView = (ListView)rootView.findViewById(R.id.list);
         listView.setAdapter(placeAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+                // Get the clicked list item at current position
+                Place sleepPlace = sleepPlaces.get(position);
+                Toast.makeText(getActivity(), "Sleep item clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         return rootView;
     }
