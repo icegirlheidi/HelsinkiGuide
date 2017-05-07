@@ -35,7 +35,7 @@ public class SeePlaceAdapter extends ArrayAdapter<Place> {
         ImageView imageView = (ImageView)listItemView.findViewById(R.id.see_image);
         imageView.setImageResource(currentPlace.getImageResourceId());
 
-        TextView textView = (TextView)listItemView.findViewById(R.id.see_text);
+        TextView textView = (TextView)listItemView.findViewById(R.id.see_place_name);
         textView.setText(currentPlace.getPlaceName());
         return listItemView;
     }

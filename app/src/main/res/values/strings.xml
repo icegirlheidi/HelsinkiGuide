@@ -8,4 +8,6 @@
     <string name="eat_fragment">EAT</string>
     <string name="sleep_fragment">SLEEP</string>
     <string name="play_fragment">PLAY</string>
+    <string name="title_activity_sleep_details">SleepDetailsActivity</string>
+    <string name="title_activity_place_details">PlaceDetailsActivity</string>
 </resources>

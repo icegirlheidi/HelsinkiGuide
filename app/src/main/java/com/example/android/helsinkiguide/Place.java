@@ -65,6 +65,18 @@ public class Place {
 
     }
 
+    // Construct Place class
+    public Place(String placeName, String placeStyle, int placeImageResrouceId, String placeDescription, String placeAddress,
+                 String placeTelephone, String placeWebsite) {
+        mPlaceName = placeName;
+        mPlaceStyle = placeStyle;
+        mImageResourceId = placeImageResrouceId;
+        mPlaceDescription = placeDescription;
+        mPlaceAddress = placeAddress;
+        mPlaceTelephone = placeTelephone;
+        mPlaceWebsite = placeWebsite;
+    }
+
     // Get the name of the place
     public String getPlaceName() {
         return mPlaceName;
@@ -104,6 +116,7 @@ public class Place {
     public String getPlaceWebsite() {
         return mPlaceWebsite;
     }
+
     // Get the opening time of the place
     public String getPlaceOpenTime() {
         return mPlaceOpenTime;
