@@ -82,6 +82,16 @@ public class SeeDetailsActivity extends AppCompatActivity {
                 "adult/child €10/free, 4-6pm Fri free")
 
         );
+        detailsSeePlaces.add(new
+
+                Place("Suomenlinna", "Fortress", R.drawable.sight_suomenlinnna,
+                "Suomenlinna, the ‘fortress of Finland’, is set on a cluster of islands connected by bridges. The UNESCO World Heritage site was originally built by the Swedes as Sveaborg in the mid-18th century. Several museums, former bunkers and fortress walls, as well as Finland's only remaining WWII submarine, are fascinating to explore; its tourist office has info. Cafes and picnic spots are plentiful.",
+                "Suomenlinna, Helsinki", "+358-295-338-410",
+                "http://www.suomenlinna.fi/en/",
+                "12/08/2017 - 3:00pm",
+                "Ferry one way/return €4.50/7")
+
+        );
 
         // Get the position of item clicked from EatFragment
         Intent intent = getIntent();

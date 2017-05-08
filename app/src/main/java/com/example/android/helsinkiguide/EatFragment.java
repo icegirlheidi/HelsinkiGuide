@@ -34,22 +34,22 @@ public class EatFragment extends Fragment {
         final ArrayList<Place> eatPlaces = new ArrayList<Place>();
         eatPlaces.add(new Place("Olo", "Michelin-starred",
                 "Considered Helsinki's best restaurant, Michelin starred Olo occupies a handsome 19th-century harbourside mansion.",
-                R.drawable.place_pic));
+                R.drawable.restaurant_olo));
         eatPlaces.add(new Place("Kuu", "Top Choice",
                 "Traditional Finnish fare is given a sharp, contemporary twist at Kuu, which creates dishes from local ingredients",
-                R.drawable.place_pic));
+                R.drawable.restaurant_kuu));
         eatPlaces.add(new Place("Karl Fazer Cafe", "Cafe",
                 "Founded in 1891 and fronted by a striking art-deco facade, this cavernous classic cafe is the flagship for Fazer's chocolate empire.",
-                R.drawable.place_pic));
+                R.drawable.restaurant_karl_fazer_cafe));
         eatPlaces.add(new Place("Zucchini", "Vegetarian",
                 "One of the city’s original and most popular vegetarian cafes, Zucchini is a top-notch lunch spot.",
-                R.drawable.place_pic));
+                R.drawable.restaurant_zucchini));
         eatPlaces.add(new Place("Kosmos", "Finnish",
                 "Designed by Alvar Aalto, and with a bohemian history, this nonagenarian place is a Helsinki classic.",
-                R.drawable.place_pic));
+                R.drawable.restaurant_kosmos));
         eatPlaces.add(new Place("Juuri", "Finnish",
                 "Creative takes on classic Finnish ingredients draw the crowds to this stylish modern restaurant.",
-                R.drawable.place_pic));
+                R.drawable.restaurant_juuri));
 
         // Create placeAdapter and set it with place_list
         PlaceAdapter placeAdapter = new PlaceAdapter(getActivity(), eatPlaces);

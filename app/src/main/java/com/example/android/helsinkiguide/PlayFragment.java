@@ -34,22 +34,22 @@ public class PlayFragment extends Fragment {
         final ArrayList<Place> playPlaces = new ArrayList<>();
         playPlaces.add(new Place("Flamingo Spa", "Spa",
                 "Flamingo Spa is a complex of a wonderful Waterpark for families and a peaceful Spa area only for adults.",
-                R.drawable.place_pic));
+                R.drawable.activity_flamingo_spa));
         playPlaces.add(new Place("Restaurant Day", "Event",
                 "On a Restaurant Day anyone can set up a restaurant, anywhere in Finland.",
-                R.drawable.place_pic));
+                R.drawable.activity_restaurant_day));
         playPlaces.add(new Place("Cosy Finnish Sauna Evening", "Sauna",
                 "Visit a Finnish home and experience an authentic sauna, if you dare.",
-                R.drawable.place_pic));
+                R.drawable.activity_finnish_sauna));
         playPlaces.add(new Place("Lux Helsinki Light Festival", "Event",
                 "Flamingo Spa is a complex of a wonderful Waterpark for families and a peaceful Spa area only for adults.",
-                R.drawable.place_pic));
+                R.drawable.activity_lux_light_festival));
         playPlaces.add(new Place("Cleaning day", "Event",
-                "Cleaning Day is a new day of celebration for friends of flea markets and recycling. The neatest festival of the year changes cities and neighborhoods into huge flea markets and marketplaces. Anyone can offer their second hand items up for sale on the streets, yards and at home, as well as make the best finds of the day.",
-                R.drawable.place_pic));
+                "Cleaning Day is a new day of celebration for friends of flea markets and recycling.",
+                R.drawable.activity_siivous_paiva));
         playPlaces.add(new Place("Helsinki City Marathon", "Event",
-                "The biggest marathon event in Finland, Helsinki City Marathon, collects over 4500 runners around the world to see the beautiful city of Helsinki. Route takes runners thrue the city and shows also the beautiful seaside of Helsinki.",
-                R.drawable.place_pic));
+                "The biggest marathon event in Finland, Helsinki City Marathon, collects over 4500 runners around the world to see the beautiful city of Helsinki.",
+                R.drawable.activity_helsinki_city_marathon));
 
         // Create placeAdapter and set it with place_list
         ListView listView = (ListView)rootView.findViewById(R.id.list);

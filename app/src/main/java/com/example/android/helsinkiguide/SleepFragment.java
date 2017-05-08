@@ -34,22 +34,22 @@ public class SleepFragment extends Fragment {
         final ArrayList<Place> sleepPlaces = new ArrayList<>();
         sleepPlaces.add(new Place("Hotel Haven", "TOP CHOICE",
                 "The closest hotel to the kauppatori is elegant, welcoming and scores high on all levels.",
-                R.drawable.place_pic));
+                R.drawable.hotel_haven));
         sleepPlaces.add(new Place("Hotel Katajanokka", "TOP CHOICE",
                 "Set in a refurbished prison, this place offers character in spades on Katajanokka island.",
-                R.drawable.place_pic));
+                R.drawable.hotel_katajanokka));
         sleepPlaces.add(new Place("Hotel F6", "TOP CHOICE",
                 "Stunningly designed, this hotel opened in 2016 and ranges around an internal courtyard",
-                R.drawable.place_pic));
+                R.drawable.hotel_f6));
         sleepPlaces.add(new Place("Hostel Diana Park", "HOSTEL",
                 "Helsinki’s most characterful and laid-back hostel occupies the top floor of a building in a lively street ",
-                R.drawable.place_pic));
+                R.drawable.hotel_hostel_diana));
         sleepPlaces.add(new Place("GLO Hotel Kluuvi", "HOTEL IN CITY CENTRE",
                 "The relaxed atmosphere continues through the comfortably modish public areas to the rooms.",
-                R.drawable.place_pic));
+                R.drawable.hotel_glo_kluuvi));
         sleepPlaces.add(new Place("Hellsten Helsinki Parliament", "APARTMENT",
                 "the apartments here have sleek modern furnishings, kitchenette, internet connections and cable TV.",
-                R.drawable.place_pic));
+                R.drawable.hotel_hellsten));
 
         // Create placeAdapter and set it with place_list
         PlaceAdapter placeAdapter = new PlaceAdapter(getActivity(), sleepPlaces);
