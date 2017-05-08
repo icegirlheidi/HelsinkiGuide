@@ -20,18 +20,18 @@
         </activity>
         <activity
             android:name=".EatDetailsActivity"
-            android:label="Restaurants"
+            android:label="Eat"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SleepDetailsActivity"
-            android:label="Hotels"
+            android:label="Sleep"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".PlayDetailsActivity"
-            android:label="Activities"
+            android:label="Play"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".SeeDetailsActivity"
-            android:label="Sights"
+            android:label="See"
             android:parentActivityName=".MainActivity"></activity>
     </application>
 

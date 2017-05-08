@@ -39,9 +39,12 @@ public class SeeFragment extends Fragment {
         seePlaces.add(new Place("Suomenlinna", R.drawable.sight_suomenlinnna));
 
         SeePlaceAdapter adapter = new SeePlaceAdapter(getContext(), seePlaces);
-
         ListView listView = (ListView)rootView.findViewById(R.id.list);
         listView.setAdapter(adapter);
+
+        // Set to have no divider
+        listView.setDivider(null);
+        listView.setDividerHeight(0);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/place_details"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -80,7 +81,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="Unioninkatu 29, 00170 Helsinki" />
+                android:text="Unioninkatu 29, 00170 Helsinki"
+                android:textColor="@color/colorSecondaryText" />
         </LinearLayout>
 
         <LinearLayout
@@ -102,7 +104,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="+358923406120" />
+                android:text="+358923406120"
+                android:textColor="@color/colorSecondaryText" />
         </LinearLayout>
 
         <LinearLayout
@@ -124,7 +127,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="+http://www.helsinginkirkot.fi/en/churches/cathedral" />
+                android:text="+http://www.helsinginkirkot.fi/en/churches/cathedral"
+                android:textColor="@color/colorSecondaryText" />
         </LinearLayout>
 
         <LinearLayout
@@ -164,7 +168,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginRight="16dp"
                     android:gravity="center_vertical"
-                    android:text="Open every day 9 am–6 pm, June–August 9 am–0.00 am. Open daily 9-18, in June-August daily 9-24. Closed during services and other church events." />
+                    android:text="Open every day 9 am–6 pm, June–August 9 am–0.00 am. Open daily 9-18, in June-August daily 9-24. Closed during services and other church events."
+                    android:textColor="@color/colorSecondaryText" />
             </LinearLayout>
 
             <LinearLayout
@@ -187,7 +192,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginRight="16dp"
                     android:gravity="center_vertical"
-                    android:text="Free entrance" />
+                    android:text="Free entrance"
+                    android:textColor="@color/colorSecondaryText" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
