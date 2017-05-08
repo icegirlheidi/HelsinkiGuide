@@ -30,13 +30,13 @@ public class SeeFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.place_list, container, false);
 
         final ArrayList<Place> seePlaces = new ArrayList<>();
-        seePlaces.add(new Place("Tuomiokirkko", R.drawable.sight_tuomiokirkko));
-        seePlaces.add(new Place("Temppeliaukio", R.drawable.sight_temppeliaukio));
-        seePlaces.add(new Place("Kamppi Chapel", R.drawable.sight_kamppi_chapel));
-        seePlaces.add(new Place("Kiasma", R.drawable.sight_kiasma));
-        seePlaces.add(new Place("Seurasaari", R.drawable.sight_seurasaari));
-        seePlaces.add(new Place("Kansallismuseum", R.drawable.sight_kansallismuseo));
-        seePlaces.add(new Place("Suomenlinna", R.drawable.sight_suomenlinnna));
+        seePlaces.add(new Place("Tuomiokirkko", "Church", R.drawable.sight_tuomiokirkko));
+        seePlaces.add(new Place("Temppeliaukio", "Church", R.drawable.sight_temppeliaukio));
+        seePlaces.add(new Place("Kamppi Chapel", "Church", R.drawable.sight_kamppi_chapel));
+        seePlaces.add(new Place("Kiasma", "Art museum", R.drawable.sight_kiasma));
+        seePlaces.add(new Place("Seurasaari", "Open air museum", R.drawable.sight_seurasaari));
+        seePlaces.add(new Place("Kansallismuseum", "Museum", R.drawable.sight_kansallismuseo));
+        seePlaces.add(new Place("Suomenlinna", "Fortress", R.drawable.sight_suomenlinnna));
 
         SeePlaceAdapter adapter = new SeePlaceAdapter(getContext(), seePlaces);
         ListView listView = (ListView)rootView.findViewById(R.id.list);

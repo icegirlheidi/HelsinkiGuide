@@ -3,15 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingTop="16dp"
-    android:layout_marginBottom="16dp"
+    android:paddingTop="@dimen/list_item_margin"
+    android:layout_marginBottom="@dimen/list_item_margin"
     android:background="@color/colorPrimaryLight">
 
     <ImageView
         android:id="@+id/image"
         android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:src="@drawable/hotel_haven"
+        android:layout_height="@dimen/list_item_image_height"
         android:scaleType="centerCrop"/>
 
     <LinearLayout
@@ -19,7 +18,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:paddingTop="@dimen/list_item_margin"
+        android:paddingLeft="@dimen/list_item_margin"
+        android:paddingRight="@dimen/list_item_margin"
+        android:paddingBottom="@dimen/list_item_extra_margin"
         android:background="@color/colorPrimary">
 
         <TextView
@@ -28,16 +30,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="@color/colorPrimaryText"
-            android:textSize="24sp"
-            android:text="Bloem"/>
+            android:textSize="@dimen/list_item_text_size"/>
         <TextView
             android:id="@+id/place_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="@color/colorSecondaryText"
-            android:text="Italian"
-            android:textSize="16sp"
+            android:textSize="@dimen/list_item_secondary_text_size"
             android:textAllCaps="true" />
         <TextView
             android:id="@+id/place_description"
@@ -45,10 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:textColor="@color/colorPrimaryText"
-            android:textSize="16sp"
-
-            android:text="Exceptional meals prepared by passionate Italian chefs"/>
-
+            android:textSize="@dimen/list_item_secondary_text_size" />
     </LinearLayout>
 
 </LinearLayout>

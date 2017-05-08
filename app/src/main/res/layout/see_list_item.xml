@@ -2,18 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="16dp"
-    android:paddingTop="16dp">
+    android:paddingBottom="@dimen/list_item_margin"
+    android:paddingTop="@dimen/list_item_margin">
 
     <ImageView
         android:id="@+id/see_image"
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="@dimen/list_item_image_height"
         android:scaleType="centerCrop"
-        android:src="@drawable/tuomiokirkko"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -22,25 +21,23 @@
         android:layout_alignBottom="@+id/see_image"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="16dp">
+        android:layout_marginLeft="@dimen/list_item_margin"
+        android:layout_marginBottom="@dimen/list_item_margin">
 
         <TextView
             android:id="@+id/see_place_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tuomiokirkko"
             android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="@dimen/see_list_text_size"
             android:textColor="@android:color/white"/>
         <TextView
             android:id="@+id/see_place_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
-            android:text="Church"
             android:textStyle="bold"
-            android:textSize="12sp"/>
+            android:textSize="@dimen/see_list_secondary_text_size" />
     </LinearLayout>
 
 </RelativeLayout>

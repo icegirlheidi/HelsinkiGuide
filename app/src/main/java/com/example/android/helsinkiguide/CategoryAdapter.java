@@ -48,13 +48,13 @@ public class CategoryAdapter extends FragmentPagerAdapter {
         // get the page title of each tab
         switch (position) {
             case 0:
-                return mContext.getString(R.string.see_fragment);
+                return mContext.getString(R.string.see).toUpperCase();
             case 1:
-                return mContext.getString(R.string.eat_fragment);
+                return mContext.getString(R.string.eat).toUpperCase();
             case 2:
-                return mContext.getString(R.string.sleep_fragment);
+                return mContext.getString(R.string.sleep).toUpperCase();
             case 3:
-                return mContext.getString(R.string.play_fragment);
+                return mContext.getString(R.string.play).toUpperCase();
         }
         return null;
     }

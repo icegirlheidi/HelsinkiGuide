@@ -45,8 +45,9 @@ public class Place {
     }
 
     // Construct Place class
-    public Place(String placeName, int imageResourceId) {
+    public Place(String placeName, String placeStyle, int imageResourceId) {
         mPlaceName = placeName;
+        mPlaceStyle = placeStyle;
         mImageResourceId = imageResourceId;
     }
 
