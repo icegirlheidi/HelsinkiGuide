@@ -3,10 +3,6 @@ package com.example.android.helsinkiguide;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-/**
- * Created by icegirlheidi on 17/5/2.
- */
-
 public final class Place implements Parcelable {
 
     // the name of this place
@@ -14,6 +10,8 @@ public final class Place implements Parcelable {
 
     // the style of this place
     private String mPlaceStyle;
+
+    private String mPlaceSimpleDescription;
 
     // a short description about this place
     private String mPlaceDescription;
@@ -37,26 +35,12 @@ public final class Place implements Parcelable {
     private String mPlacePrice;
 
     // Construct Place class
-    public Place(String placeName, String placeStyle, String placeDescription, int imageResourceId) {
-        mPlaceName = placeName;
-        mPlaceStyle = placeStyle;
-        mPlaceDescription = placeDescription;
-        mImageResourceId = imageResourceId;
-    }
-
-    // Construct Place class
-    public Place(String placeName, String placeStyle, int imageResourceId) {
-        mPlaceName = placeName;
-        mPlaceStyle = placeStyle;
-        mImageResourceId = imageResourceId;
-    }
-
-    // Construct Place class
-    public Place(String placeName, String placeStyle, int placeImageResrouceId, String placeDescription, String placeAddress,
+    public Place(String placeName, String placeStyle, int placeImageResrouceId, String placeSimpleDescription, String placeDescription, String placeAddress,
                  String placeTelephone, String placeWebsite, String placeOpenTime, String placePrice) {
         mPlaceName = placeName;
         mPlaceStyle = placeStyle;
         mImageResourceId = placeImageResrouceId;
+        mPlaceSimpleDescription = placeSimpleDescription;
         mPlaceDescription = placeDescription;
         mPlaceAddress = placeAddress;
         mPlaceTelephone = placeTelephone;
@@ -67,11 +51,12 @@ public final class Place implements Parcelable {
     }
 
     // Construct Place class
-    public Place(String placeName, String placeStyle, int placeImageResrouceId, String placeDescription, String placeAddress,
+    public Place(String placeName, String placeStyle, int placeImageResrouceId, String placeSimpleDescription, String placeDescription, String placeAddress,
                  String placeTelephone, String placeWebsite) {
         mPlaceName = placeName;
         mPlaceStyle = placeStyle;
         mImageResourceId = placeImageResrouceId;
+        mPlaceSimpleDescription = placeSimpleDescription;
         mPlaceDescription = placeDescription;
         mPlaceAddress = placeAddress;
         mPlaceTelephone = placeTelephone;
@@ -81,6 +66,7 @@ public final class Place implements Parcelable {
     protected Place(Parcel in) {
         mPlaceName = in.readString();
         mPlaceStyle = in.readString();
+        mPlaceSimpleDescription = in.readString();
         mPlaceDescription = in.readString();
         mImageResourceId = in.readInt();
         mPlaceAddress = in.readString();
@@ -113,6 +99,11 @@ public final class Place implements Parcelable {
     }
 
     // Get a simple description about the place
+    public String getPlaceSimpleDescription() {
+        return mPlaceSimpleDescription;
+    }
+
+    // Get a detailed description about the place
     public String getPlaceDescription() {
         return mPlaceDescription;
     }
@@ -156,6 +147,7 @@ public final class Place implements Parcelable {
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(mPlaceName);
         parcel.writeString(mPlaceStyle);
+        parcel.writeString(mPlaceSimpleDescription);
         parcel.writeString(mPlaceDescription);
         parcel.writeInt(mImageResourceId);
         parcel.writeString(mPlaceAddress);

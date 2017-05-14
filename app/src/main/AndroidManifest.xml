@@ -19,20 +19,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".EatDetailsActivity"
+            android:name=".DetailsActivity"
             android:label="@string/eat"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".SleepDetailsActivity"
-            android:label="@string/see"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".PlayDetailsActivity"
-            android:label="@string/play"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".SeeDetailsActivity"
-            android:label="@string/see"
             android:parentActivityName=".MainActivity" />
     </application>
 

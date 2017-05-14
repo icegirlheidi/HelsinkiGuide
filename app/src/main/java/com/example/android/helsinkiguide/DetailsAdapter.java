@@ -11,9 +11,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by icegirlheidi on 17/5/11.
- */
 
 public class DetailsAdapter extends ArrayAdapter<Place> {
     public DetailsAdapter(Context context, ArrayList<Place> detailsPlaces) {
@@ -30,6 +27,7 @@ public class DetailsAdapter extends ArrayAdapter<Place> {
                     R.layout.place_details_list_item, parent, false);
         }
 
+        // Get details of current place
         Place currentDetailsPlace = getItem(position);
 
         // Set the place name to be name of current place

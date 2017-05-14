@@ -11,9 +11,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by icegirlheidi on 17/5/3.
- */
 
 public class SeePlaceAdapter extends ArrayAdapter<Place> {
     public SeePlaceAdapter(Context context, ArrayList<Place> seePlaces) {

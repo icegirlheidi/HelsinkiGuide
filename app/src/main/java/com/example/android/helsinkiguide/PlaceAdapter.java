@@ -11,9 +11,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by icegirlheidi on 17/5/2.
- */
 
 public class PlaceAdapter extends ArrayAdapter<Place> {
     public PlaceAdapter(Context context, ArrayList<Place> places) {
@@ -45,9 +42,9 @@ public class PlaceAdapter extends ArrayAdapter<Place> {
         placeStyle.setText(currentPlace.getPlaceStyle());
 
         // Get the place description view
-        TextView placeDescription = (TextView)listItemView.findViewById(R.id.place_description);
-        // Set the place description of current place to be text
-        placeDescription.setText(currentPlace.getPlaceDescription());
+        TextView placeDescription = (TextView)listItemView.findViewById(R.id.place_simple_description);
+        // Set the simple description of current place to be text
+        placeDescription.setText(currentPlace.getPlaceSimpleDescription());
 
         // Get the image view
         ImageView imageView = (ImageView)listItemView.findViewById(R.id.image);
