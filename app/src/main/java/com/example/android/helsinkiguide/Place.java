@@ -1,10 +1,13 @@
 package com.example.android.helsinkiguide;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by icegirlheidi on 17/5/2.
  */
 
-public final class Place {
+public final class Place implements Parcelable {
 
     // the name of this place
     private String mPlaceName;
@@ -17,9 +20,6 @@ public final class Place {
 
     // image resource id of this place
     private int mImageResourceId;
-
-    // Set initially has no image
-    private static final int NO_IMAGE_PROVIDED = -1;
 
     // address of the place
     private String mPlaceAddress;
@@ -78,6 +78,30 @@ public final class Place {
         mPlaceWebsite = placeWebsite;
     }
 
+    protected Place(Parcel in) {
+        mPlaceName = in.readString();
+        mPlaceStyle = in.readString();
+        mPlaceDescription = in.readString();
+        mImageResourceId = in.readInt();
+        mPlaceAddress = in.readString();
+        mPlaceTelephone = in.readString();
+        mPlaceWebsite = in.readString();
+        mPlaceOpenTime = in.readString();
+        mPlacePrice = in.readString();
+    }
+
+    public static final Creator<Place> CREATOR = new Creator<Place>() {
+        @Override
+        public Place createFromParcel(Parcel in) {
+            return new Place(in);
+        }
+
+        @Override
+        public Place[] newArray(int size) {
+            return new Place[size];
+        }
+    };
+
     // Get the name of the place
     public String getPlaceName() {
         return mPlaceName;
@@ -96,11 +120,6 @@ public final class Place {
     // Get the image resource Id of the place
     public int getImageResourceId() {
         return mImageResourceId;
-    }
-
-    // Check if there is image
-    public boolean hasImage() {
-        return mImageResourceId != NO_IMAGE_PROVIDED;
     }
 
     // Get the address of the place
@@ -126,5 +145,23 @@ public final class Place {
     // Get the price of entrance to the place
     public String getPlacePrice() {
         return mPlacePrice;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(mPlaceName);
+        parcel.writeString(mPlaceStyle);
+        parcel.writeString(mPlaceDescription);
+        parcel.writeInt(mImageResourceId);
+        parcel.writeString(mPlaceAddress);
+        parcel.writeString(mPlaceTelephone);
+        parcel.writeString(mPlaceWebsite);
+        parcel.writeString(mPlaceOpenTime);
+        parcel.writeString(mPlacePrice);
     }
 }

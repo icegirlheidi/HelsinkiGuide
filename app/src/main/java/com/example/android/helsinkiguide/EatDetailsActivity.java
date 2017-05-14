@@ -1,6 +1,5 @@
 package com.example.android.helsinkiguide;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -50,68 +49,15 @@ public class EatDetailsActivity extends AppCompatActivity {
         Log.v("eat details places: ", eatDetailsPlaces.toString());
 
         // Get the position of item clicked from EatFragment
-        Intent intent = getIntent();
-        int position = intent.getIntExtra("position", 0);
+        Bundle extras = getIntent().getExtras();
+        int position = extras.getInt("position");
 
         Place currentDetailsPlace = eatDetailsPlaces.get(position);
 
-        /*// Set the place name to be name of current place
-        TextView placeNameTextView = (TextView)findViewById(R.id.details_place_name);
-        placeNameTextView.setText(currentDetailsPlace.getPlaceName());
+        final ArrayList<Place> currentPlace = new ArrayList<>();
+        currentPlace.add(currentDetailsPlace);
 
-        // Set the style to be the style of current place
-        TextView placeStyleTextView = (TextView)findViewById(R.id.details_place_style);
-        placeStyleTextView.setText(currentDetailsPlace.getPlaceStyle());
-
-        // Set the image resource Id to be the image resource Id of current place
-        ImageView placeImageView = (ImageView)findViewById(R.id.details_image);
-        placeImageView.setImageResource(currentDetailsPlace.getImageResourceId());
-
-        // Set the description to be the description of current place
-        TextView detailsPlaceDescription = (TextView)findViewById(R.id.details_place_description);
-        detailsPlaceDescription.setText(currentDetailsPlace.getPlaceDescription());
-
-        // Set the address to be the address of current place
-        TextView detailsPlaceAddress = (TextView)findViewById(R.id.address);
-        detailsPlaceAddress.setText(currentDetailsPlace.getPlaceAddress());
-
-        // Set the telephone number to be the telephone number of current place
-        TextView detailsPlaceTelephone = (TextView)findViewById(R.id.telephone);
-        detailsPlaceTelephone.setText(currentDetailsPlace.getPlaceTelephone());
-
-        // Set the website to be the website of current place
-        TextView detailsPlaceWebsite = (TextView)findViewById(R.id.website);
-        detailsPlaceWebsite.setText(currentDetailsPlace.getPlaceWebsite());
-
-        // Set More Info visible
-        // Set More Information invisible
-        TextView moreInfoTitle = (TextView)findViewById(R.id.details_more_info_title);
-        if (moreInfoTitle == null) {
-            moreInfoTitle.setVisibility(View.GONE);
-        } else {
-            moreInfoTitle.setVisibility(View.VISIBLE);
-        }
-
-        // Set the opening time to be the opening time of current place
-        TextView detailsPlaceOpenTime = (TextView)findViewById(R.id.open_time);
-        if (detailsPlaceOpenTime == null) {
-            detailsPlaceOpenTime.setVisibility(View.GONE);
-        } else {
-            detailsPlaceOpenTime.setVisibility(View.VISIBLE);
-            detailsPlaceOpenTime.setText(currentDetailsPlace.getPlaceOpenTime());
-        }
-
-        // Set the average price to be the average price of current place
-        TextView detailsPlacePrice = (TextView)findViewById(R.id.price);
-        if (detailsPlacePrice == null) {
-            detailsPlacePrice.setVisibility(View.GONE);
-        } else {
-            detailsPlacePrice.setVisibility(View.VISIBLE);
-            detailsPlacePrice.setText(currentDetailsPlace.getPlacePrice());
-        }
-*/
-
-        DetailsAdapter detailsAdapter = new DetailsAdapter(this, eatDetailsPlaces);
+        DetailsAdapter detailsAdapter = new DetailsAdapter(this, currentPlace);
         ListView listView = (ListView)findViewById(R.id.list);
         listView.setAdapter(detailsAdapter);
     }

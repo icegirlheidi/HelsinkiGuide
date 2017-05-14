@@ -1,11 +1,8 @@
 package com.example.android.helsinkiguide;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -16,7 +13,8 @@ public class SeeDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // Set content view to be the layout of list item which shows the details of the place
-        setContentView(R.layout.place_details_list_item);
+        //setContentView(R.layout.place_details_list_item);
+        setContentView(R.layout.place_list);
 
 
         // Create and initialize the ArrayList which include the details of the place
@@ -93,52 +91,17 @@ public class SeeDetailsActivity extends AppCompatActivity {
         );
 
         // Get the position of item clicked from EatFragment
-        Intent intent = getIntent();
-        int position = intent.getIntExtra("position", 0);
+        Bundle extras = getIntent().getExtras();
+        int position = extras.getInt("position");
 
-        // Get the corresponding place based on the item clicked in SleepFragment
-        Place currentPlace = detailsSeePlaces.get(position);
+        Place currentDetailsPlace = detailsSeePlaces.get(position);
 
-        // Set the place name to be name of current place
-        TextView placeNameTextView = (TextView) findViewById(R.id.details_place_name);
-        placeNameTextView.setText(currentPlace.getPlaceName());
+        final ArrayList<Place> currentPlace = new ArrayList<>();
+        currentPlace.add(currentDetailsPlace);
 
-        // Set the style to be the style of current place
-        TextView placeStyleTextView = (TextView) findViewById(R.id.details_place_style);
-        placeStyleTextView.setText(currentPlace.getPlaceStyle());
-
-        // Set the image resource Id to be the image resource Id of current place
-        ImageView placeImageView = (ImageView) findViewById(R.id.details_image);
-        placeImageView.setImageResource(currentPlace.getImageResourceId());
-
-        // Set the description to be the description of current place
-        TextView detailsPlaceDescription = (TextView) findViewById(R.id.details_place_description);
-        detailsPlaceDescription.setText(currentPlace.getPlaceDescription());
-
-        // Set the address to be the address of current place
-        TextView detailsPlaceAddress = (TextView) findViewById(R.id.address);
-        detailsPlaceAddress.setText(currentPlace.getPlaceAddress());
-
-        // Set the telephone number to be the telephone number of current place
-        TextView detailsPlaceTelephone = (TextView) findViewById(R.id.telephone);
-        detailsPlaceTelephone.setText(currentPlace.getPlaceTelephone());
-
-        // Set the website to be the website of current place
-        TextView detailsPlaceWebsite = (TextView) findViewById(R.id.website);
-        detailsPlaceWebsite.setText(currentPlace.getPlaceWebsite());
-
-        // Set More Info visible
-        // Set More Information invisible
-        TextView moreInfoTitle = (TextView) findViewById(R.id.details_more_info_title);
-        moreInfoTitle.setVisibility(View.VISIBLE);
-
-        // Set the opening time to be the opening time of current place
-        TextView detailsPlaceOpenTime = (TextView) findViewById(R.id.open_time);
-        detailsPlaceOpenTime.setText(currentPlace.getPlaceOpenTime());
-
-        // Set the average price to be the average price of current place
-        TextView detailsPlacePrice = (TextView) findViewById(R.id.price);
-        detailsPlacePrice.setText(currentPlace.getPlacePrice());
+        DetailsAdapter detailsAdapter = new DetailsAdapter(this, currentPlace);
+        ListView listView = (ListView)findViewById(R.id.list);
+        listView.setAdapter(detailsAdapter);
 
     }
 }
