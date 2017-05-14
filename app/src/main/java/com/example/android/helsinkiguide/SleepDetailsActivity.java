@@ -3,9 +3,7 @@ package com.example.android.helsinkiguide;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -16,7 +14,8 @@ public class SleepDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // Set content view to be the layout of list item which shows the details of the place
-        setContentView(R.layout.place_details_list_item);
+        //setContentView(R.layout.place_details_list_item);
+        setContentView(R.layout.place_list);
 
 
         // Create and initialize the ArrayList which include the details of the place
@@ -53,7 +52,7 @@ public class SleepDetailsActivity extends AppCompatActivity {
         // Get the corresponding place based on the item clicked in SleepFragment
         Place currentPlace = detailsSleepPlaces.get(position);
 
-        // Set the place name to be name of current place
+        /*// Set the place name to be name of current place
         TextView placeNameTextView = (TextView) findViewById(R.id.details_place_name);
         placeNameTextView.setText(currentPlace.getPlaceName());
 
@@ -87,7 +86,11 @@ public class SleepDetailsActivity extends AppCompatActivity {
         TextView moreInfoTime = (TextView) findViewById(R.id.open_time);
         moreInfoTime.setVisibility(View.GONE);
         TextView moreInfoPrice = (TextView) findViewById(R.id.price);
-        moreInfoPrice.setVisibility(View.GONE);
+        moreInfoPrice.setVisibility(View.GONE);*/
+
+        DetailsAdapter detailsAdapter = new DetailsAdapter(this, detailsSleepPlaces);
+        ListView listView = (ListView)findViewById(R.id.list);
+        listView.setAdapter(detailsAdapter);
     }
 
 }

@@ -60,27 +60,23 @@ public class DetailsAdapter extends ArrayAdapter<Place> {
         TextView detailsPlaceWebsite = (TextView) listItemView.findViewById(R.id.website);
         detailsPlaceWebsite.setText(currentDetailsPlace.getPlaceWebsite());
 
-        // Set More Info visible
-        // Set More Information invisible
+        // Get the view of title More
         TextView moreInfoTitle = (TextView) listItemView.findViewById(R.id.details_more_info_title);
-        if (moreInfoTitle == null) {
-            moreInfoTitle.setVisibility(View.GONE);
-        } else {
-            moreInfoTitle.setVisibility(View.VISIBLE);
-        }
 
         // Set the opening time to be the opening time of current place
         TextView detailsPlaceOpenTime = (TextView) listItemView.findViewById(R.id.open_time);
-        if (detailsPlaceOpenTime == null) {
+        if (currentDetailsPlace.getPlaceOpenTime() == null) {
             detailsPlaceOpenTime.setVisibility(View.GONE);
+            moreInfoTitle.setVisibility(View.GONE);
         } else {
             detailsPlaceOpenTime.setVisibility(View.VISIBLE);
             detailsPlaceOpenTime.setText(currentDetailsPlace.getPlaceOpenTime());
+            moreInfoTitle.setVisibility(View.VISIBLE);
         }
 
         // Set the average price to be the average price of current place
         TextView detailsPlacePrice = (TextView) listItemView.findViewById(R.id.price);
-        if (detailsPlacePrice == null) {
+        if (currentDetailsPlace.getPlacePrice() == null) {
             detailsPlacePrice.setVisibility(View.GONE);
         } else {
             detailsPlacePrice.setVisibility(View.VISIBLE);

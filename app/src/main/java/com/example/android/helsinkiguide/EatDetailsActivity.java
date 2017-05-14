@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -16,7 +14,8 @@ public class EatDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.place_details_list_item);
+        //setContentView(R.layout.place_details_list_item);
+        setContentView(R.layout.place_list);
 
         final ArrayList<Place> eatDetailsPlaces = new ArrayList<>();
         eatDetailsPlaces.add(new Place("Olo", "Michelin-starred", R.drawable.restaurant_olo,
@@ -56,7 +55,7 @@ public class EatDetailsActivity extends AppCompatActivity {
 
         Place currentDetailsPlace = eatDetailsPlaces.get(position);
 
-        // Set the place name to be name of current place
+        /*// Set the place name to be name of current place
         TextView placeNameTextView = (TextView)findViewById(R.id.details_place_name);
         placeNameTextView.setText(currentDetailsPlace.getPlaceName());
 
@@ -110,7 +109,10 @@ public class EatDetailsActivity extends AppCompatActivity {
             detailsPlacePrice.setVisibility(View.VISIBLE);
             detailsPlacePrice.setText(currentDetailsPlace.getPlacePrice());
         }
+*/
 
-
+        DetailsAdapter detailsAdapter = new DetailsAdapter(this, eatDetailsPlaces);
+        ListView listView = (ListView)findViewById(R.id.list);
+        listView.setAdapter(detailsAdapter);
     }
 }
