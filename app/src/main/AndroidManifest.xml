@@ -30,9 +30,10 @@
             android:name=".PlayDetailsActivity"
             android:label="@string/play"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".SeeDetailsActivity"
+        <activity
+            android:name=".SeeDetailsActivity"
             android:label="@string/see"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

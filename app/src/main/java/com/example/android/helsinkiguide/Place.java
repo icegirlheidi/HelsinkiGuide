@@ -4,7 +4,7 @@ package com.example.android.helsinkiguide;
  * Created by icegirlheidi on 17/5/2.
  */
 
-public class Place {
+public final class Place {
 
     // the name of this place
     private String mPlaceName;

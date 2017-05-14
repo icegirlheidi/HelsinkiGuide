@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -129,9 +128,9 @@ public class SeeDetailsActivity extends AppCompatActivity {
         detailsPlaceWebsite.setText(currentPlace.getPlaceWebsite());
 
         // Set More Info visible
-        // Set More Information container invisible
-        LinearLayout moreInfoContainer = (LinearLayout)findViewById(R.id.more_info_container);
-        moreInfoContainer.setVisibility(View.VISIBLE);
+        // Set More Information invisible
+        TextView moreInfoTitle = (TextView) findViewById(R.id.details_more_info_title);
+        moreInfoTitle.setVisibility(View.VISIBLE);
 
         // Set the opening time to be the opening time of current place
         TextView detailsPlaceOpenTime = (TextView) findViewById(R.id.open_time);

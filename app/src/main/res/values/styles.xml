@@ -37,4 +37,27 @@
         <item name="colorControlNormal">@color/colorPrimaryText</item>
     </style>
 
+    <!-- Contact and More info style for place details list item -->
+    <style name="contact_and_more_info_list_style">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingLeft">@dimen/place_details_list_item_margin</item>
+        <item name="android:paddingRight">@dimen/place_details_list_item_margin</item>
+        <item name="android:paddingTop">@dimen/place_details_list_item_margin</item>
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!-- Contact and More info title style for place details list item-->
+    <style name="contact_and_more_info_title_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/place_details_list_item_extra_margin</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">@dimen/secondary_title_text_size</item>
+    </style>
+
 </resources>

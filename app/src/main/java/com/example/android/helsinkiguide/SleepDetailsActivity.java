@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -82,9 +81,13 @@ public class SleepDetailsActivity extends AppCompatActivity {
         TextView detailsPlaceWebsite = (TextView) findViewById(R.id.website);
         detailsPlaceWebsite.setText(currentPlace.getPlaceWebsite());
 
-        // Set More Information container invisible
-        LinearLayout moreInfoContainer = (LinearLayout) findViewById(R.id.more_info_container);
-        moreInfoContainer.setVisibility(View.GONE);
+        // Set More Information invisible
+        TextView moreInfoTitle = (TextView) findViewById(R.id.details_more_info_title);
+        moreInfoTitle.setVisibility(View.GONE);
+        TextView moreInfoTime = (TextView) findViewById(R.id.open_time);
+        moreInfoTime.setVisibility(View.GONE);
+        TextView moreInfoPrice = (TextView) findViewById(R.id.price);
+        moreInfoPrice.setVisibility(View.GONE);
     }
 
 }
