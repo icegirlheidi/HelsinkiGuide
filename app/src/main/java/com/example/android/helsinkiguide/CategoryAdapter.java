@@ -34,6 +34,7 @@ public class CategoryAdapter extends FragmentPagerAdapter {
         }
     }
 
+
     @Override
     public int getCount() {
         // Show 4 total pages.
@@ -55,4 +56,6 @@ public class CategoryAdapter extends FragmentPagerAdapter {
         }
         return null;
     }
+
+
 }

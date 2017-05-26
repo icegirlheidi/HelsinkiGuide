@@ -76,6 +76,7 @@ public class DetailsAdapter extends ArrayAdapter<Place> {
         TextView detailsPlacePrice = (TextView) listItemView.findViewById(R.id.price);
         if (currentDetailsPlace.getPlacePrice() == null) {
             detailsPlacePrice.setVisibility(View.GONE);
+            detailsPlaceWebsite.setPadding(26,16,16,26);
         } else {
             detailsPlacePrice.setVisibility(View.VISIBLE);
             detailsPlacePrice.setText(currentDetailsPlace.getPlacePrice());
