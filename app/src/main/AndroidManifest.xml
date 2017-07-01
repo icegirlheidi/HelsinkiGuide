@@ -20,7 +20,6 @@
         </activity>
         <activity
             android:name=".DetailsActivity"
-            android:label="@string/eat"
             android:parentActivityName=".MainActivity" />
     </application>
 
