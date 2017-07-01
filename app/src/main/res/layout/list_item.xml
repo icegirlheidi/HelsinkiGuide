@@ -32,6 +32,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimaryText"
             android:textSize="@dimen/list_item_text_size"
+            android:fontFamily="sans-serif"
             tools:text="Hotel Haven"/>
         <TextView
             android:id="@+id/place_style"
@@ -41,13 +42,15 @@
             android:textSize="@dimen/list_item_secondary_text_size"
             android:textAllCaps="true"
             android:layout_marginTop="@dimen/list_item_line_space"
+            android:fontFamily="sans-serif"
             tools:text="top choice"/>
         <TextView
             android:id="@+id/place_simple_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimaryText"
-            android:textSize="@dimen/list_item_secondary_text_size"
+            android:fontFamily="sans-serif-light"
+            android:textAppearance="?android:textAppearanceMedium"
             android:layout_marginTop="@dimen/list_item_line_space"
             tools:text="The closest hotel to the kauppatori is elegant, welcoming and scores high on all levels."/>
     </LinearLayout>

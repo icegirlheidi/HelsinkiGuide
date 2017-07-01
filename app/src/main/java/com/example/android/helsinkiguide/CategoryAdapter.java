@@ -14,7 +14,6 @@ public class CategoryAdapter extends FragmentPagerAdapter {
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
      */
-
     public CategoryAdapter(FragmentManager fm, Context context) {
         super(fm);
         mContext = context;
@@ -26,19 +25,19 @@ public class CategoryAdapter extends FragmentPagerAdapter {
         // Return a PlaceholderFragment (defined as a static inner class below).
         switch (position) {
             case 0:
-                CommonFragment seeFragment = new CommonFragment();
+                PlaceFragment seeFragment = new PlaceFragment();
                 setFragmentBundle(seeFragment, position);
                 return seeFragment;
             case 1:
-                CommonFragment eatFragment = new CommonFragment();
+                PlaceFragment eatFragment = new PlaceFragment();
                 setFragmentBundle(eatFragment, position);
                 return eatFragment;
             case 2:
-                CommonFragment sleepFragment = new CommonFragment();
+                PlaceFragment sleepFragment = new PlaceFragment();
                 setFragmentBundle(sleepFragment, position);
                 return sleepFragment;
             case 3:
-                CommonFragment playFragment = new CommonFragment();
+                PlaceFragment playFragment = new PlaceFragment();
                 setFragmentBundle(playFragment, position);
                 return playFragment;
             default:
@@ -68,13 +67,13 @@ public class CategoryAdapter extends FragmentPagerAdapter {
         return null;
     }
 
-    //  Set the bundle for fragment
 
-    /**
-     * @param commonFragment
-     * @param position
+    /** Set the bundle for fragment
+     *
+     * @param placeFragment is the fragment used to show a list of places
+     * @param position is the position of fragment
      */
-    private void setFragmentBundle(CommonFragment commonFragment, int position) {
+    private void setFragmentBundle(PlaceFragment placeFragment, int position) {
         Bundle bundle = new Bundle();
         switch (position) {
             case 0:
@@ -94,6 +93,7 @@ public class CategoryAdapter extends FragmentPagerAdapter {
                 bundle.putString("title", "Play");
                 break;
         }
-        commonFragment.setArguments(bundle);
+        // Set bundle with fragment
+        placeFragment.setArguments(bundle);
     }
 }

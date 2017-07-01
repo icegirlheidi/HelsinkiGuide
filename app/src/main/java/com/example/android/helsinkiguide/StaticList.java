@@ -2,12 +2,10 @@ package com.example.android.helsinkiguide;
 
 import java.util.ArrayList;
 
-/**
- * Created by Omniata on 7/1/17.
- */
 
 public class StaticList {
 
+    // Place list for SEE fragment
     static public ArrayList<Place> getSeePlaces() {
         ArrayList<Place> seePlaces = new ArrayList<>();
         seePlaces.add(new Place("Tuomiokirkko", "Church", R.drawable.sight_tuomiokirkko,
@@ -69,6 +67,7 @@ public class StaticList {
         return seePlaces;
     }
 
+    // Place list for EAT fragment
     static public ArrayList<Place> getEatPlaces() {
         ArrayList<Place> eatPlaces = new ArrayList<>();
         eatPlaces.add(new Place("Olo", "Michelin-starred", R.drawable.restaurant_olo,
@@ -108,6 +107,7 @@ public class StaticList {
         return eatPlaces;
     }
 
+    // Place list for SLEEP fragment
     static public ArrayList<Place> getSleepPlaces() {
         ArrayList<Place> sleepPlaces = new ArrayList<>();
         sleepPlaces.add(new Place("Hotel Haven", "TOP CHOICE", R.drawable.hotel_haven,
@@ -144,6 +144,7 @@ public class StaticList {
         return sleepPlaces;
     }
 
+    // Place list for PLAY fragment
     static public ArrayList<Place> getPlayPlaces() {
         ArrayList<Place> playPlaces = new ArrayList<>();
         playPlaces.add(new Place("Flamingo Spa", "Spa", R.drawable.activity_flamingo_spa,

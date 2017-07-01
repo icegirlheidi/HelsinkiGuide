@@ -21,23 +21,17 @@ public class SeePlaceAdapter extends ArrayAdapter<Place> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View listItemView = convertView;
-
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.see_list_item, parent, false);
         }
-
         Place currentPlace = getItem(position);
-
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.see_image);
         imageView.setImageResource(currentPlace.getImageResourceId());
-
         TextView placeNameTextView = (TextView) listItemView.findViewById(R.id.see_place_name);
         placeNameTextView.setText(currentPlace.getPlaceName());
-
         TextView placeStyleTextView = (TextView) listItemView.findViewById(R.id.see_place_style);
         placeStyleTextView.setText(currentPlace.getPlaceStyle());
-
         return listItemView;
     }
 }
