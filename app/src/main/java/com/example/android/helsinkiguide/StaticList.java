@@ -69,7 +69,7 @@ public class StaticList {
         return seePlaces;
     }
 
-    static public ArrayList<Place> getEatPlaces(){
+    static public ArrayList<Place> getEatPlaces() {
         ArrayList<Place> eatPlaces = new ArrayList<>();
         eatPlaces.add(new Place("Olo", "Michelin-starred", R.drawable.restaurant_olo,
                 "Considered Helsinki's best restaurant, Michelin-starred Olo occupies a handsome 19th-century harbourside mansion.",
@@ -108,7 +108,7 @@ public class StaticList {
         return eatPlaces;
     }
 
-    static public ArrayList<Place> getSleepPlaces(){
+    static public ArrayList<Place> getSleepPlaces() {
         ArrayList<Place> sleepPlaces = new ArrayList<>();
         sleepPlaces.add(new Place("Hotel Haven", "TOP CHOICE", R.drawable.hotel_haven,
                 "The closest hotel to the kauppatori is elegant, welcoming and scores high on all levels.",
@@ -144,7 +144,7 @@ public class StaticList {
         return sleepPlaces;
     }
 
-    static public ArrayList<Place> getPlayPlaces(){
+    static public ArrayList<Place> getPlayPlaces() {
         ArrayList<Place> playPlaces = new ArrayList<>();
         playPlaces.add(new Place("Flamingo Spa", "Spa", R.drawable.activity_flamingo_spa,
                 "Flamingo Spa is a complex of a wonderful Waterpark for families and a peaceful Spa area only for adults.",

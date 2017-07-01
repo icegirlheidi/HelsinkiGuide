@@ -29,10 +29,10 @@ public class SeePlaceAdapter extends ArrayAdapter<Place> {
 
         Place currentPlace = getItem(position);
 
-        ImageView imageView = (ImageView)listItemView.findViewById(R.id.see_image);
+        ImageView imageView = (ImageView) listItemView.findViewById(R.id.see_image);
         imageView.setImageResource(currentPlace.getImageResourceId());
 
-        TextView placeNameTextView = (TextView)listItemView.findViewById(R.id.see_place_name);
+        TextView placeNameTextView = (TextView) listItemView.findViewById(R.id.see_place_name);
         placeNameTextView.setText(currentPlace.getPlaceName());
 
         TextView placeStyleTextView = (TextView) listItemView.findViewById(R.id.see_place_style);

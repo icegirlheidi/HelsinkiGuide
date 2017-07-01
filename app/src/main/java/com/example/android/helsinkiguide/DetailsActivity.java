@@ -1,7 +1,6 @@
 package com.example.android.helsinkiguide;
 
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.ListView;
@@ -22,6 +21,8 @@ public class DetailsActivity extends AppCompatActivity {
 
         // Get the current place
         Place currentDetailsPlace = extras.getParcelable("currentPlace");
+        String title = extras.getString("title");
+        this.setTitle(title);
 
         // Create an ArrayList
         final ArrayList<Place> currentPlace = new ArrayList<>();
@@ -31,7 +32,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         // Create adapter and set it with the place_list
         DetailsAdapter detailsAdapter = new DetailsAdapter(this, currentPlace);
-        ListView listView = (ListView)findViewById(R.id.list);
+        ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(detailsAdapter);
     }
 
@@ -39,7 +40,7 @@ public class DetailsActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        switch(id) {
+        switch (id) {
             case android.R.id.home:
                 onBackPressed();
                 return true;

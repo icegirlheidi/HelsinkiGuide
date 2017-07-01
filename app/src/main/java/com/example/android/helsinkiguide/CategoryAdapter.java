@@ -6,8 +6,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import java.util.ArrayList;
-
 
 public class CategoryAdapter extends FragmentPagerAdapter {
     private Context mContext;
@@ -73,7 +71,6 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     //  Set the bundle for fragment
 
     /**
-     *
      * @param commonFragment
      * @param position
      */
@@ -82,19 +79,19 @@ public class CategoryAdapter extends FragmentPagerAdapter {
         switch (position) {
             case 0:
                 bundle.putParcelableArrayList("placesList", StaticList.getSeePlaces());
-                bundle.putString("name", "seeFragment");
+                bundle.putString("title", "See");
                 break;
             case 1:
                 bundle.putParcelableArrayList("placesList", StaticList.getEatPlaces());
-                bundle.putString("name", "eatFragment");
+                bundle.putString("title", "Eat");
                 break;
             case 2:
                 bundle.putParcelableArrayList("placesList", StaticList.getSleepPlaces());
-                bundle.putString("name", "sleepFragment");
+                bundle.putString("title", "Sleep");
                 break;
             case 3:
                 bundle.putParcelableArrayList("placesList", StaticList.getPlayPlaces());
-                bundle.putString("name", "playFragment");
+                bundle.putString("title", "Play");
                 break;
         }
         commonFragment.setArguments(bundle);

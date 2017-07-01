@@ -1,8 +1,8 @@
 package com.example.android.helsinkiguide;
 
-import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +21,7 @@ public class CommonFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ArrayList<Place> targetList;
-        String fragmentName = "";
+        String fragmentTitle = "";
 
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.place_list, container, false);
@@ -32,12 +32,12 @@ public class CommonFragment extends Fragment {
         Bundle bundle = this.getArguments();
         if (bundle != null) {
             targetList = bundle.getParcelableArrayList("placesList");
-            fragmentName = bundle.getString("name");
+            fragmentTitle = bundle.getString("title");
         }
 
         // Create placeAdapter and set it with place_list
         ListView listView = (ListView) rootView.findViewById(R.id.list);
-        if (fragmentName.equals("seeFragment")){
+        if (fragmentTitle.equals("See")) {
             SeePlaceAdapter adapter = new SeePlaceAdapter(getActivity(), targetList);
             listView.setAdapter(adapter);
             // Set to have no divider
@@ -49,6 +49,7 @@ public class CommonFragment extends Fragment {
         }
 
         final ArrayList<Place> finalTargetList = targetList;
+        final String finalFragmentTitle = fragmentTitle;
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
@@ -62,6 +63,7 @@ public class CommonFragment extends Fragment {
                 // Pass a bundle which contains the place arraylist when constructing the activity
                 Bundle newbundle = new Bundle();
                 newbundle.putParcelable("currentPlace", currentPlace);
+                newbundle.putString("title", finalFragmentTitle);
                 intent.putExtras(newbundle);
                 startActivity(intent);
             }

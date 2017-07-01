@@ -31,7 +31,7 @@ public class DetailsAdapter extends ArrayAdapter<Place> {
         Place currentDetailsPlace = getItem(position);
 
         // Set the place name to be name of current place
-        TextView placeNameTextView = (TextView)listItemView.findViewById(R.id.details_place_name);
+        TextView placeNameTextView = (TextView) listItemView.findViewById(R.id.details_place_name);
         placeNameTextView.setText(currentDetailsPlace.getPlaceName());
 
         // Set the style to be the style of current place
@@ -76,7 +76,7 @@ public class DetailsAdapter extends ArrayAdapter<Place> {
         TextView detailsPlacePrice = (TextView) listItemView.findViewById(R.id.price);
         if (currentDetailsPlace.getPlacePrice() == null) {
             detailsPlacePrice.setVisibility(View.GONE);
-            detailsPlaceWebsite.setPadding(26,16,16,26);
+            detailsPlaceWebsite.setPadding(26, 16, 16, 26);
         } else {
             detailsPlacePrice.setVisibility(View.VISIBLE);
             detailsPlacePrice.setText(currentDetailsPlace.getPlacePrice());
