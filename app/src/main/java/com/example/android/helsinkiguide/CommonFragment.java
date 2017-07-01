@@ -54,19 +54,15 @@ public class CommonFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
                 // Get the clicked list item at current position
-                Place place = finalTargetList.get(position);
+                Place currentPlace = finalTargetList.get(position);
 
                 // Turn to the page showing details of this place after certain item is clicked
                 Intent intent = new Intent(getActivity(), DetailsActivity.class);
 
                 // Pass a bundle which contains the place arraylist when constructing the activity
                 Bundle newbundle = new Bundle();
-                newbundle.putParcelableArrayList("placesList", finalTargetList);
+                newbundle.putParcelable("currentPlace", currentPlace);
                 intent.putExtras(newbundle);
-
-                // Put the position of the clicked item as extra information when turning to another activity.
-                intent.putExtra("position", position);
-
                 startActivity(intent);
             }
         });

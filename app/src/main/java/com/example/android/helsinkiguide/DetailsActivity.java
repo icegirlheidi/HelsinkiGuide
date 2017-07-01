@@ -19,13 +19,9 @@ public class DetailsActivity extends AppCompatActivity {
 
         // Get the position of item clicked from EatFragment
         Bundle extras = getIntent().getExtras();
-        int position = extras.getInt("position");
-
-        // Get the array list which is passed through bundle from fragment
-        ArrayList<Place> placesList = extras.getParcelableArrayList("placesList");
 
         // Get the current place
-        Place currentDetailsPlace = placesList.get(position);
+        Place currentDetailsPlace = extras.getParcelable("currentPlace");
 
         // Create an ArrayList
         final ArrayList<Place> currentPlace = new ArrayList<>();
