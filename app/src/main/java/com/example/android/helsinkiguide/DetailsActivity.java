@@ -38,4 +38,21 @@ public class DetailsActivity extends AppCompatActivity {
         ListView listView = (ListView)findViewById(R.id.list);
         listView.setAdapter(detailsAdapter);
     }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch(id) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }
