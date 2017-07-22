@@ -11,9 +11,9 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class CommonFragment extends Fragment {
+public class PlaceFragment extends Fragment {
 
-    public CommonFragment() {
+    public PlaceFragment() {
         // Required empty public constructor
     }
 
