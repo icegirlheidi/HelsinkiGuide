@@ -12,4 +12,3 @@ It has both phone and tablet view.
 
 <img width="45%" src="screenshots/screen4.png" />
 
-<img width="80%" src="screenshots/screen5.png" />
